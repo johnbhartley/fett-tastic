@@ -84,10 +84,11 @@
                 <div id="header">
                     <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1><!-- default Site Title -->
                     <div class="description"><?php bloginfo('description'); ?></div><!-- default Info Description -->  
-                    <?php wp_nav_menu( array('menu' => 'Main Menu' )); ?> <!-- Main Menu, created in Appearance -->
-                    <div class="clear"></div> 
                 </div>
-                	
+                <div id="nav">
+                	<?php wp_nav_menu( array('menu' => 'Main Menu' )); ?> <!-- Main Menu, created in Appearance -->
+                    <div class="clear"></div> 
+                </div>    
             </div>    
             
 
