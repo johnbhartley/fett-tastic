@@ -1,0 +1,611 @@
+/*   
+Theme Name: Fett-tastic
+Theme URI: http://johnbhartley.com/portfolio
+Description: This is my mobile-first responsive framework.
+Author: John Hartley
+Author URI: http://www.johnbhartley.com
+Version: 1.0.0
+*/
+
+/* TABLE OF CONTENTS - idea taken from csswizardry.com */
+ 
+/*         
+		RESET
+		MAIN ELEMENTS
+ 		COMBOS
+		PAGE WRAP
+		HEADER
+		MAIN CONTENT
+		SIDEBAR
+		FOOTER 
+		WORDPRESS CORE
+		RESPONSIVENESS
+		PRINT		
+*/
+
+/* RESET from http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers - not necessary if you are not going to use HTML5 */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a, a img {
+	text-decoration: none;	
+	outline: none;
+	border: 0;
+}
+
+.clear {
+	clear: both;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* MAIN ELEMENTS */
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+/*--- HEADINGS from @csswizardy ---*/
+h1, h2, h3, h4, h5, h6 {
+	margin: 6px 0;
+  	font-weight: bold;
+}
+
+h1 {
+  font-size: 2em; /* 32px --> 32 ÷ 16 = 2 */
+  line-height: .75em; /* 32px --> 24 ÷ 32 = 0.75 */
+}
+
+h2 {
+  font-size: 1.375em; /* 22px --> 22 ÷ 16 = 1.375 */
+  line-height: 1.0909em; /* 24px --> 24 ÷ 22 = 1.090909(09) */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px --> 20 ÷ 16 = 1.25 */
+  line-height: 1.2em; /* 24px --> 24 ÷ 20 = 1.2 */
+}
+
+h4, #footer h2 {
+  font-size: 1.125em; /* 18px --> 18 ÷ 16 = 1.125 */
+  line-height: 1.333em; /* 24px --> 24 ÷ 18 = 1.3333333(3) */
+}
+
+h5, h6 {
+  font-size: 1em; /* 16px --> 16 ÷ 16 = 1 */
+  line-height: 1.5em; /* 24px --> 24 ÷ 16 = 1.5 */
+}
+
+/* COMBOS */
+
+#page-wrap, #header, #main-content, #page-content, #sidebar, #footer {
+	position: relative;
+}
+
+#header, #main-content, #sidebar, #footer {
+	padding: 1em 1.5em;
+}
+
+#page-wrap, #header-wrap, #footer-wrap {
+	position: relative;
+	width: 100%;
+}
+
+
+
+/* PAGE WRAP */
+
+#page-wrap {
+	background: url(images/texture_bg.png) repeat;
+}
+
+
+/* HEADER */
+
+#header-wrap {
+	background: #ccc;
+}
+
+#header {
+	
+}
+
+h1 a {
+	color: #97120b;
+}
+
+
+/* this is the menu CSS for the select menu */
+.nav {
+	padding-top: 10px;
+}
+
+.menu-main-menu-container ul {
+	display: none;
+}
+
+.menu-main-menu-container select {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	padding: 1.5em;
+	line-height: 1.5em;
+	color: #fff;
+	font-family: helvetica, sans-serif;
+	background: #000;
+   	font-size: 1em;
+   	border: 1px solid #ccc;
+   	height: 34px;
+}
+
+.menu-main-menu-container ul ul li a:before {
+content: "-";
+}
+
+/* MAIN CONTENT */
+
+/* all content between header and footer */
+#main-content {
+	background: #fff;
+}
+
+/* content of the page - includes comments */
+#page-content {
+	
+}
+
+.post {
+	
+}
+
+.entry {
+	
+}
+
+#comments {
+	margin-top: 1.5em;
+}
+
+#respond {
+	
+}
+
+#commentform div {
+	clear: both;
+}
+
+#commentform label, #commentform input {
+	line-height: 1.5em;
+}
+
+#commentform div input, #commentform textarea {
+	width: 98%;
+	padding: 6px 1%;
+	border: 1px solid #aaa;
+	margin-right: 10px;
+}
+
+#respond input[type="submit"] {
+	border: solid 1px #B1B1B1;
+	background-color: #E1E1E1;
+	padding: 10px;
+	font-size: 1em;
+	width: 70%;
+	display: block;
+	margin: 1.5em auto;
+	color: #414141;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#respond textarea {
+	resize: none;
+}
+
+
+
+
+
+/* SIDEBAR */
+
+/* does this need explaining? It's teh sidebarz :P */
+#sidebar {
+	background: #ddd;
+}
+
+
+
+
+
+/* FOOTER */
+
+#footer-wrap {
+	background: #ccc;
+}
+
+#footer {
+	overflow: hidden;
+}
+
+#footer p {
+	margin-bottom: 0;
+}
+
+/* Footer widget */
+.footbar {
+	width: 46%;
+	padding: 1em 0;
+	margin-right: 4%;
+	float: left;
+}
+
+.footbar:last-child {
+	
+}
+
+
+
+/* WORDPRESS CORE */
+/* this is the standard core CSS that WordPress posts and entries will use */
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter, div.aligncenter {
+    display:block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float:left;
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float:left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.meta, #respond input {
+	margin-bottom: 10px;	
+}
+
+/* for search widget */
+
+#sidebar input {
+	width: 96%;
+	margin: 2px 0;
+	padding: 5px;
+	line-height: 1.4em;
+	font-size: 1em;
+	border: 1px solid #ccc;
+	background: #ededed; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ededed 15%, #ffffff 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(15%,#ededed), color-stop(99%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ededed 15%,#ffffff 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ededed 15%,#ffffff 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ededed 15%,#ffffff 99%); /* IE10+ */
+	background: linear-gradient(top,  #ededed 15%,#ffffff 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+
+}
+
+#sidebar input[type=submit] {
+	color: #fff;
+	cursor: pointer;
+	margin-bottom: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	width: 150px;
+	background: #6f6f6f; /* Old browsers */
+	background: -moz-linear-gradient(top,  #6f6f6f 15%, #4f4f4f 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(15%,#6f6f6f), color-stop(99%,#4f4f4f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #6f6f6f 15%,#4f4f4f 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #6f6f6f 15%,#4f4f4f 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #6f6f6f 15%,#4f4f4f 99%); /* IE10+ */
+	background: linear-gradient(top,  #6f6f6f 15%,#4f4f4f 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f6f6f', endColorstr='#4f4f4f',GradientType=0 ); /* IE6-8 */
+
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin:0;
+    max-width: 98.5%;
+    padding:0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size:11px;
+    line-height:17px;
+    margin:0;
+    padding:0 4px 5px;
+}
+
+/* RESPONSIVENESS */
+
+img { 
+   -ms-interpolation-mode: bicubic; 
+   max-width: 100%;
+   height: auto;
+}
+
+.post img {
+	max-width: 96%;
+}
+
+/* this is for videos like YouTube, Vimeo, etc.  */
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (min-width: 480px) {   
+	
+} /*/mediaquery*/
+
+@media screen and (min-width: 640px) {   
+	#main-content {
+		overflow: hidden;
+	}	
+
+	#header {
+		padding-bottom: 0;
+	}
+
+	#page-content {
+		width: 70%;
+		float: left;
+	}
+
+	.menu-main-menu-container ul {
+		display: block;
+	}
+	.menu-main-menu-container ul, .menu-main-menu-container li {
+		margin: 0px;
+		padding: 0px;
+	}
+	.menu-main-menu-container ul li {
+		background: #000;
+		display: inline;
+		float: left;
+		position: relative;
+	}
+	.menu-main-menu-container ul li a {
+		display: inline-block;
+		line-height: 1.5em;
+		color: #ccc;
+		padding: 0 20px;
+		font-size: 1.5em;
+		text-decoration: none;
+		font-weight: normal;
+	}
+	.menu-main-menu-container ul li a:hover {
+		color: #e9c996;
+		cursor: pointer;
+	}
+	.menu-main-menu-container ul ul {
+		position: absolute;
+		z-index: 999;
+		background: #291700;
+		min-width: 100%;
+		height: 0px;
+		overflow: hidden;
+		
+	}
+	.menu-main-menu-container ul li:hover ul {
+	
+		height: auto;
+		overflow: auto;
+	}
+	.menu-main-menu-container ul ul li {
+		float: none;
+		display: list-item;
+		border-bottom: 1px solid #000;
+		list-style: none;
+	}
+	.menu-main-menu-container ul ul li a {
+		display: block;
+		line-height: 1.5em;
+	}
+	.menu-main-menu-container ul ul li a:before {
+		content: none;
+	}
+	.menu-main-menu-container ul li:hover > a {
+		color: #aaa;
+	}
+
+	.menu-main-menu-container select {
+		display: none;
+	}
+
+	#respond input[type="submit"] {
+		width: 25%;
+		margin: 1.5em 0;
+	}
+
+	#commentform div input {
+		width: 50%;
+		float: left;
+		padding: 3px;
+	}
+
+	#commentform div label {
+		width: 40%;
+		padding-top: 10px;
+	}
+
+	#commentform textarea {
+		width: 70%;	
+	}
+
+	#sidebar {
+		width: 24%;
+		float: right;
+		padding: 1.5em 2.5%;
+	}
+
+	.footbar {
+		width: 23.5%;
+		margin-right: 2%;
+	}
+
+	.footbar.last {
+		margin-right: 0;
+	}
+
+
+} /*/mediaquery*/
+
+@media screen and (min-width: 768px) {   
+
+} /*/mediaquery*/
+
+@media screen and (min-width: 1024px) {   
+	#header, #main-content, #footer {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	
+} /*/mediaquery*/
+
+@media screen and (min-width: 1200px) {   /* Anything bigger than 1200px will display with the CSS used here */
+	
+} /*/mediaquery*/
+
+/* PRINT */
+
+@media print {
+
+.do-not-print { display: none; }
+#comments { page-break-before: always; }
+
+body { width: 100% !important; margin: 0 !important; padding: 0 !important; line-height: 1.4; word-spacing: 1.1pt; letter-spacing: 0.2pt; font-family: Garamond,"Times New Roman", serif; color: #000; background: none; font-size: 12pt; }
+h1,h2,h3,h4,h5,h6 { font-family: Helvetica, Arial, sans-serif; }
+h1 { font-size: 19pt; }
+h2 { font-size:17pt; }
+h3 { font-size:15pt; }
+h4,h5,h6 { font-size:12pt; }
+code { font: 10pt Courier, monospace; } 
+blockquote { margin: 1.3em; padding: 1em; }
+img { display: block; margin: 1em 0; }
+a img { border: none; }
+table { margin: 1px; text-align:left; }
+th { border-bottom: 1px solid #333;  font-weight: bold; }
+td { border-bottom: 1px solid #333; }
+th, td { padding: 4px 10px 4px 0; }
+caption { background: #fff; margin-bottom: 2em; text-align: left; }
+thead { display: table-header-group; }
+tr { page-break-inside: avoid; } 
+a { text-decoration: none; color: black; }
+	
+} /* END print media */
