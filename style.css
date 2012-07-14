@@ -51,7 +51,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 ol, ul {
-	list-style: none;
+	margin: 0 0 1.5em 1.5em;
 }
 blockquote, q {
 	quotes: none;
@@ -472,7 +472,7 @@ img {
 	#nav {
 		margin: 0 auto;
 		max-width: 1008px;
-		background: #000;
+		background: #496451;
 		padding: 0;
 	}
 
@@ -485,21 +485,30 @@ img {
 		padding: 0px;
 	}
 	.menu-main-menu-container ul li {
-		background: #000;
+		background: #6b836d;
 		display: inline;
 		float: left;
 		position: relative;
 		line-height: 1.5em;
 	}
+
+	.menu-main-menu-container ul li.current-menu-item {
+		background: #771c19;
+	}
 	.menu-main-menu-container ul li a {
 		display: inline-block;
 		
-		color: #ccc;
+		color: #f1f0f5;
 		padding: .5em 1.5em;
 		font-size: 1em;
 		text-decoration: none;
 		font-weight: normal;
 	}
+
+	.menu-main-menu-container ul li:hover{
+		background: #771c19;
+	}
+
 	.menu-main-menu-container ul li a:hover {
 		color: #e9c996;
 		cursor: pointer;
@@ -514,7 +523,6 @@ img {
 		
 	}
 	.menu-main-menu-container ul li:hover ul {
-	
 		height: auto;
 		overflow: auto;
 	}
